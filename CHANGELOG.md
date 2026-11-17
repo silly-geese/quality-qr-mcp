@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0.2] - 2026-11-17
+
+### Removed
+- The Smithery badge and install note. The listing at smithery.ai/server/quality-qr/qr-code-mcp no longer exists, so both linked to a 404. `smithery.yaml` stays, so the server can be listed there again.
+
 ## [1.0.0.1] - 2026-04-12
 
 ### Added

@@ -1,7 +1,6 @@
 # Quality QR MCP Server
 
 [![Validate manifests](https://github.com/silly-geese/quality-qr-mcp/actions/workflows/validate.yml/badge.svg)](https://github.com/silly-geese/quality-qr-mcp/actions/workflows/validate.yml)
-[![Smithery](https://smithery.ai/badge/quality-qr/qr-code-mcp)](https://smithery.ai/server/quality-qr/qr-code-mcp)
 [![MCP](https://img.shields.io/badge/MCP-streamable--http-7c3aed.svg)](https://modelcontextprotocol.io)
 [![Protocol](https://img.shields.io/badge/protocol-2025--03--26-blue.svg)](https://modelcontextprotocol.io/specification)
 [![License](https://img.shields.io/badge/license-proprietary-lightgrey.svg)](LICENSE)
@@ -19,8 +18,6 @@ Unlike generic QR code generators, Quality QR codes are **saved to your account*
 Sign up at [quality-qr.app](https://quality-qr.app) and generate an API key at **Dashboard > Settings > API Keys**.
 
 ### 2. Configure Your MCP Client
-
-> **Smithery users:** If you install via [Smithery](https://smithery.ai/server/quality-qr/qr-code-mcp), you'll be prompted for your `apiKey` directly — Smithery handles the `Authorization` header for you. The configs below are for manual setup.
 
 #### Claude Desktop
 
@@ -127,13 +124,13 @@ When you receive a `429 Too Many Requests` response, wait for the number of seco
 Your API key grants full access to your QR codes and analytics. Treat it like a password.
 
 - **Rotate regularly.** Generate a new key in **Dashboard > Settings > API Keys**, update your MCP client config, then revoke the old key. You can have multiple active keys to allow zero-downtime rotation.
-- **Revoke compromised keys immediately.** Revocation takes effect instantly — any in-flight requests using the old key will fail.
+- **Revoke compromised keys immediately.** Revocation takes effect instantly: any in-flight requests using the old key will fail.
 - **Restrict access to config files.** MCP client configs store your key in plaintext. On macOS/Linux, ensure only your user can read them (e.g., `chmod 600`). Avoid committing config files with real keys to version control.
 
 ## Links
 
 - [Quality QR](https://quality-qr.app)
-- [Agent Onboarding (SKILL.md)](https://quality-qr.app/agent-onboarding/SKILL.md) — step-by-step instructions for AI agents to use Quality QR autonomously ([source](SKILL.md))
+- [Agent Onboarding (SKILL.md)](https://quality-qr.app/agent-onboarding/SKILL.md): step-by-step instructions for AI agents to use Quality QR autonomously ([source](SKILL.md))
 - [MCP Documentation](https://quality-qr.app/docs/mcp)
 - [API Documentation](https://quality-qr.app/docs/api)
 - [Pricing](https://quality-qr.app/pricing)
